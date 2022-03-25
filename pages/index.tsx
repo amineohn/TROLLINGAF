@@ -1,9 +1,13 @@
 import { Transition } from "@headlessui/react";
 import type { NextPage } from "next";
 import React, { useState } from "react";
+import Confetti from "react-confetti";
 import FadeIn from "react-fade-in";
+import { useWindowSize } from "react-use";
 const Home: NextPage = () => {
   const [openModal, setOpenModal] = useState(false);
+  const { width, height } = useWindowSize();
+
   return (
     <>
       <Transition
@@ -16,6 +20,7 @@ const Home: NextPage = () => {
         leaveTo="opacity-0"
         className="z-50"
       >
+        <Confetti width={width} height={height} />
         <div
           className="fixed z-10 inset-0 overflow-y-auto"
           aria-labelledby="modal-title"
