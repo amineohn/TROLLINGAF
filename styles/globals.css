@@ -1,6 +1,6 @@
 html,
 body {
-  @apply font-default bg-[url('/static/images/wallpaper.jpg')] bg-cover bg-center h-screen;
+  @apply font-default bg-gradient-to-tr from-rose-500 via-rose-600 to-rose-700 bg-cover bg-center h-screen;
 }
 a {
   color: inherit;
@@ -27,6 +27,55 @@ a {
 }
 ::-webkit-scrollbar-corner {
   @apply hidden;
+}
+
+.magicFrankie {
+  font-family: MagicFrankie !important;
+}
+
+@font-face {
+  font-family: MagicFrankie;
+  src: url("/static/fonts/Magic_Frankie.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: MagicFrankie;
+  font-weight: bold;
+  src: url("/static/fonts/Magic_Frankie.otf") format("opentype");
+}
+.flip-2-hor-top-1 {
+  -webkit-animation: flip-2-hor-top-1 0.5s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite both;
+}
+@-webkit-keyframes flip-2-hor-top-1 {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0);
+    transform: translateY(0) rotateX(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100%) rotateX(-180deg);
+    transform: translateY(-100%) rotateX(-180deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+@keyframes flip-2-hor-top-1 {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0);
+    transform: translateY(0) rotateX(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100%) rotateX(-180deg);
+    transform: translateY(-100%) rotateX(-180deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
 }
 
 @tailwind base;
