@@ -75,19 +75,21 @@ const Home: NextPage = () => {
         </div>
       </Transition>
       <FadeIn className="flex flex-col justify-center items-center h-screen select-none space-y-1">
-        <h1 className="text-rose-50 text-7xl font-medium magicFrankie">
+        <h1 className="text-rose-50 text-5xl md:text-7xl font-medium magicFrankie">
           Suce ma biiiiiite
           <div className="animate-spin" onClick={() => setOpenModal(true)}>
             😆
           </div>
         </h1>
-        <video
-          src="/static/videos/bastien.mp4"
-          className="w-full h-full rounded-lg"
-          autoPlay
-          loop
-          muted
-        />
+        <div className="px-5 md:px-0">
+          <video
+            src="/static/videos/bastien.mp4"
+            className="w-full h-full rounded-lg"
+            autoPlay
+            loop
+            muted
+          />
+        </div>
       </FadeIn>
     </>
   );
